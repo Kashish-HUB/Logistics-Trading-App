@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/signupScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_user"
+            android:background="@drawable/circle_bg"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:padding="4dp"
+            android:outlineProvider="background" />
+
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="12dp" />
+
+        <RadioGroup
+            android:id="@+id/genderGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:layout_marginStart="16dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/dobText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:textColor="#555"
+            android:background="@drawable/edit_text_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <Spinner
+            android:id="@+id/spinnerProfession"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="20dp"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Profile"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"
+            android:padding="12dp" />
+
+    </LinearLayout>
+</ScrollView>

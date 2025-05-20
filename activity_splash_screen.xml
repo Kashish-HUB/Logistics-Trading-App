@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/button_blue_dark">
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:radius="60dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="60dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/truck"
+            android:contentDescription="Truck Icon"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schneider Logistics Transport"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="24dp" />
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginBottom="12dp"
+    android:elevation="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="#FFFFFF"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Vehicle Image -->
+        <ImageView
+            android:id="@+id/vehicleImage"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_placeholder"
+            android:background="@drawable/image_bg_rounded"
+            android:contentDescription="Vehicle Image" />
+
+        <!-- Driver Info -->
+        <TextView
+            android:id="@+id/driverName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Driver Name:"
+            android:textStyle="bold"
+            android:textColor="#3F51B5"
+            android:textSize="16sp"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/driverContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            android:paddingBottom="10dp" />
+
+        <!-- Vehicle Number Info -->
+        <TextView
+            android:id="@+id/vehicleNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Number:"
+            android:textStyle="bold"
+            android:textColor="#E91E63"
+            android:textSize="16sp"
+            android:paddingTop="6dp" />
+
+        <TextView
+            android:id="@+id/vehicleModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            android:paddingBottom="10dp" />
+
+        <!-- Vehicle Type Info -->
+        <TextView
+            android:id="@+id/vehicleType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type:"
+            android:textStyle="bold"
+            android:textColor="#009688"
+            android:textSize="16sp"
+            android:paddingTop="6dp" />
+
+        <TextView
+            android:id="@+id/loadCapacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            android:paddingBottom="12dp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingTop="8dp"
+            android:showDividers="middle"
+            android:divider="?android:dividerHorizontal">
+
+            <Button
+                android:id="@+id/btnViewHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View History"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#03A9F4"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnBookMaintenance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Maintenance"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#4CAF50" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

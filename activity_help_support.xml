@@ -1,0 +1,380 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fillViewport="true"
+    android:background="@drawable/blue_gradient"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Help &amp; Support"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="@drawable/header_bg"
+            android:elevation="6dp"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Frequently Asked Questions"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/button_blue_dark"
+            android:padding="12dp"
+            android:background="@drawable/section_bg"
+            android:elevation="4dp"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frequently Asked Questions"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <ExpandableListView
+                android:id="@+id/faqListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp"
+                android:background="@android:color/white"
+                android:padding="12dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:nestedScrollingEnabled="true"
+                android:layout_margin="10dp"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/emailSupportBtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Email"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:drawableLeft="@android:drawable/ic_dialog_email"
+                android:drawablePadding="8dp"
+                android:background="@drawable/button_email_bg"
+                android:padding="12dp"/>
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/callSupportBtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Call"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:drawableLeft="@android:drawable/ic_menu_call"
+                android:drawablePadding="8dp"
+                android:background="@drawable/button_call_bg"
+                android:padding="12dp"/>
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/whatsappSupportBtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="WhatsApp"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:drawableLeft="@android:drawable/ic_menu_share"
+                android:drawablePadding="8dp"
+                android:background="@drawable/button_whatsapp_bg"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat with Support Bot"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingBottom="10dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:padding="10dp">
+
+                <EditText
+                    android:id="@+id/chatbotInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Type your query..."
+                    android:textSize="16sp"
+                    android:padding="14dp"
+                    android:background="@android:color/white"
+                    android:elevation="2dp"
+                    android:drawablePadding="10dp"
+                    android:inputType="textCapSentences"
+                    android:textColorHint="@color/gray" />
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/chatbotSendBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Send"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/bg"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:drawableStart="@drawable/ic_send"
+                android:gravity="center" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/chatbotResponse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chatbot will respond here..."
+                    android:textSize="16sp"
+                    android:padding="14dp"
+                    android:textColor="@color/black"
+                    android:background="@android:color/white"
+                    android:minHeight="60dp"
+                    android:gravity="start" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/white">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Report an Issue"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingBottom="10dp"/>
+
+            <!-- Issue Description Input -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:padding="10dp">
+
+                <EditText
+                    android:id="@+id/issueDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Describe your issue..."
+                    android:textSize="16sp"
+                    android:padding="14dp"
+                    android:background="@android:color/white"
+                    android:inputType="textMultiLine"
+                    android:minHeight="100dp"
+                    android:textColorHint="@color/gray"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Upload Screenshot Button -->
+            <Button
+                android:id="@+id/uploadImageBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Upload Screenshot"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:drawableStart="@android:drawable/ic_menu_gallery"
+                android:padding="12dp"
+                android:backgroundTint="@color/bg"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="10dp"/>
+
+            <!-- Image Preview Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imagePreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Submit Issue Button -->
+            <Button
+                android:id="@+id/reportIssueBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Submit Issue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/bg"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/white">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Reported Issues"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingBottom="10dp"
+                android:gravity="center"/>
+
+            <!-- Support Ticket List in CardView -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:padding="8dp">
+
+                <ListView
+                    android:id="@+id/ticketListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:divider="@android:color/darker_gray"
+                    android:dividerHeight="1dp"
+                    android:padding="8dp"
+                    android:scrollbars="vertical"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/white">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How To Use App ?"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:paddingBottom="10dp"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/watchTutorialsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Watch Tutorials"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/bg"
+                android:textColor="@android:color/black"
+                android:drawableStart="@android:drawable/ic_media_play"
+                android:drawablePadding="10dp"
+                android:padding="12dp"
+                android:elevation="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

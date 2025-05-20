@@ -1,0 +1,205 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".CreateShipmentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <!-- Sender Details -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sender Details"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/senderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Sender Name"
+                    android:inputType="textPersonName"/>
+
+                <EditText
+                    android:id="@+id/senderAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Sender Address"
+                    android:inputType="textPostalAddress"/>
+
+                <EditText
+                    android:id="@+id/senderContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Sender Contact Number"
+                    android:inputType="phone"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Receiver Details -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receiver Details"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/receiverName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Receiver Name"
+                    android:inputType="textPersonName"/>
+
+                <EditText
+                    android:id="@+id/receiverAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Receiver Address"
+                    android:inputType="textPostalAddress"/>
+
+                <EditText
+                    android:id="@+id/receiverContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Receiver Contact Number"
+                    android:inputType="phone"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Shipment Details -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shipment Details"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"/>
+
+                <Spinner
+                    android:id="@+id/shipmentType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/selectDateButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pick a Delivery Date"
+                    android:backgroundTint="@android:color/holo_blue_light"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/deliveryDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Date: Not Selected"
+                    android:textSize="16sp"
+                    android:padding="8dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Image Selection -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shipment Image"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"/>
+
+                <ImageView
+                    android:id="@+id/shipmentImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_placeholder"/>
+
+                <Button
+                    android:id="@+id/selectImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Image"
+                    android:backgroundTint="@android:color/holo_blue_light"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Create Shipment Button -->
+        <Button
+            android:id="@+id/createShipmentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Shipment"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/nav_create_shipment"
+        android:icon="@drawable/ic_add"
+        android:title="Create Shipment"/>
+
+    <item
+        android:id="@+id/nav_track_shipment"
+        android:icon="@drawable/ic_track"
+        android:title="Track Shipment"/>
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:icon="@drawable/ic_notifications"
+        android:title="Notifications"/>
+
+    <item
+        android:id="@+id/nav_support"
+        android:icon="@drawable/ic_help"
+        android:title="Support"/>
+
+    <item
+        android:id="@+id/nav_rate_us"
+        android:icon="@drawable/ic_star"
+        android:title="Rate Us"/>
+</menu>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="start">
+
+        <!-- Vehicle Image -->
+        <ImageView
+            android:id="@+id/vehicleImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_gravity="center"/>
+
+        <!-- Vehicle Number -->
+        <TextView
+            android:id="@+id/vehicleNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Number: ABC123"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold" />
+
+        <!-- Vehicle Model -->
+        <TextView
+            android:id="@+id/vehicleModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Model: XYZ"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Vehicle Type -->
+        <TextView
+            android:id="@+id/vehicleType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type: Sedan"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="start">
+
+            <!-- View History Button -->
+            <Button
+                android:id="@+id/btnViewHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View History"
+                android:textSize="14sp"/>
+
+            <!-- Book Maintenance Button -->
+            <Button
+                android:id="@+id/btnBookMaintenance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Maintenance"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
